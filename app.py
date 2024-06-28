@@ -42,7 +42,7 @@ if status.text == 'em dia':
    pagina_fechamento.append([nome, valor, cpf, vencimento, 'em dia', 'xxx','xxx'])
    
 else:
-   planilha_fechamento = openpyxl.load_workbook(' planilha_fechamento.xlsx')
+   planilha_fechamento = openpyxl.load_workbook('planilha_fechamento.xlsx')
    pagina_fechamento = planilha_fechamento['Sheet1']
    
    pagina_fechamento.append([nome, valor, cpf, vencimento, 'pendente'])
