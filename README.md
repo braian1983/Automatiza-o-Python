@@ -9,3 +9,5 @@ Utilizei o Selenium, para poder utilizar a função web.driver, para poder acess
 utilizei o By.XPATH pois é o comando que indica qual dado queremos pegar na planilha e verificar se está pago ou em atraso.
 
 A função driver, é para saber qual a URL vamos usar para ter acesso ao banco de dados para verificarmos a procedencia de cada cliente.
+
+Na linha "driver.get('')" é onde colocamos a URL do cliente para o script saber onde ele ira fazer a conferência de pagamento/forma de pagamento, dos clientes
