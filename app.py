@@ -39,12 +39,12 @@ if status.text == 'em dia':
    data_pagamento = driver.find_element(By.XPATH, "//p[@id='paymentDate']")
    metodo_pagamento = driver.find_element(By.XPATH, "//p[@id='paymentMethod']")
    
-   pagina_fechamento.append([nome, valor, cpf, vencimento, 'em dia', 'xxx','xxx'])
+   planilha_fechamento = openpyxl.load_workbook('dados_clientes.xlsx')
+   pagina_fechamento = planilha_fechamento['Sheet1']
+   planilha_fechamento.append([nome, valor, cpf, vencimento, 'em dia', 'xxx','xxx'])
    
 else:
    planilha_fechamento = openpyxl.load_workbook('planilha_fechamento.xlsx')
    pagina_fechamento = planilha_fechamento['Sheet1']
    
    pagina_fechamento.append([nome, valor, cpf, vencimento, 'pendente'])
-   
-
